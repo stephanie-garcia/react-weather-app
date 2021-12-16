@@ -11,13 +11,48 @@ export default function WeatherTemperature(props) {
     setUnit("celsius");
   }
 
+  //   if (unit === "celsius") {
+  //     return (
+  //       <div className="WeatherTemperature">
+  //         <span className="temperature"> {Math.round(props.celsius)}</span>
+  //         <span className="unit">
+  //           °C |{" "}
+  //           <a
+  //             href="/"
+  //             onClick={showFahrenheit}
+  //             style={{ textDecoration: "none" }}
+  //           >
+  //             °F
+  //           </a>
+  //         </span>
+  //       </div>
+  //     );
+  //   } else {
+  //     let farenheit = (props.celsius * 9) / 5 + 32;
+  //     return (
+  //       <div className="WeatherTemperature">
+  //         <span className="temperature"> {Math.round(farenheit)}</span>
+  //         <span className="unit">
+  //           <a href="/" onClick={showCelsius} style={{ textDecoration: "none" }}>
+  //             °C
+  //           </a>{" "}
+  //           | °F
+  //         </span>
+  //       </div>
+  //     );
+  //   }
+
   if (unit === "celsius") {
     return (
       <div className="WeatherTemperature">
         <span className="temperature"> {Math.round(props.celsius)}</span>
         <span className="unit">
           °C |{" "}
-          <a href="/" onClick={showFahrenheit}>
+          <a
+            href="/"
+            onClick={showFahrenheit}
+            style={{ textDecoration: "none" }}
+          >
             °F
           </a>
         </span>
@@ -29,8 +64,8 @@ export default function WeatherTemperature(props) {
       <div className="WeatherTemperature">
         <span className="temperature"> {Math.round(farenheit)}</span>
         <span className="unit">
-          <a href="/" onClick={showCelsius}>
-            °C
+          <a href="/" onClick={showCelsius} style={{ textDecoration: "none" }}>
+            °C{" "}
           </a>
           | °F
         </span>
