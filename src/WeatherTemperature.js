@@ -65,7 +65,7 @@ export default function WeatherTemperature(props) {
         <span className="temperature"> {Math.round(farenheit)}</span>
         <span className="unit">
           <a href="/" onClick={showCelsius} style={{ textDecoration: "none" }}>
-            °C{" "}
+            °C {" "}
           </a>
           | °F
         </span>

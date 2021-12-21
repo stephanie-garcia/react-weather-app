@@ -9,7 +9,7 @@ export default function WeatherForecast(props) {
 
   useEffect(() => {
     setLoaded(false);
-  }, [props.coordinates]);
+  }, [props.coordinates])
 
 
 
@@ -28,9 +28,10 @@ export default function WeatherForecast(props) {
                   <WeatherForecastDay data={dailyForecast} />
                 </div>
               );
+            } else {
+              return null;
             }
             })}
-          
         </div>
       </div>
     );
